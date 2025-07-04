@@ -1,0 +1,20 @@
+{
+  "name": "back",
+  "version": "1.0.0",
+  "description": "Back-end of Carambar Project",
+  "homepage": "https://github.com/Sirolbfr/Carambar-Back#readme",
+  "bugs": {
+    "url": "https://github.com/Sirolbfr/Carambar-Back/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sirolbfr/Carambar-Back.git"
+  },
+  "license": "ISC",
+  "author": "Loris Briquet",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
