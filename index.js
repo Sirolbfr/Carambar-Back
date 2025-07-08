@@ -1,5 +1,6 @@
 /*****  IMPORTS  *****/
 const express = require("express")
+const cors = require("cors")
 const app = express()
 
 const Blague = require("./models/blague")
@@ -7,6 +8,7 @@ const Blague = require("./models/blague")
 
 /*****  Main  *****/
 
+app.use(cors())
 app.use(express.json())
 
 app.post('/blagues', async (request, response) => {
