@@ -64,5 +64,21 @@ app.get('/blagues/:id', async (request, response) => {
   }
 })
 
+app.delete('/blagues/:id', async (request, response) => {
+  try {
+    const id = request.params.id;
+    const blague = await Blague.findByPk(id);
+
+    if (!blague) {
+      return response.status(404).json({ error: "Blague not found" });
+    }
+    blague.destroy();
+    response.status(200).json({ "message": "Blague deleted successfully." });
+  } catch (error) {
+    console.error(error);
+    response.status(500).json({ error: "Server error" });
+  }
+})
+
 
 app.listen(3000)
